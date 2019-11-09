@@ -1,3 +1,4 @@
+let uid = "unit1";
 let endPoint = $('#endPoint').val();
 let startPoint = $('#startPoint').val();
 let busNumber = $('#start').val();
@@ -13,20 +14,25 @@ $('.report_button').click(function(event) {
     let busNumberOne = $('#busNumberOne').val();
     let busNumberTwo = $('#busNumberTwo').val();
 
+    let report = {
+        'uid': uid,
+        'routeNumber': routeNumber,
+        'busNumberOne': busNumberOne,
+        'busNumberTwo': busNumberTwo
+    }
+
     //sends report info to database accident table
     $.ajax({
         url: 'report.php',
         method: 'POST',
         data: {
-            'routeNumber': routeNumber,
-            'busNumberOne': busNumberOne,
-            'busNumberTwo': busNumberTwo
+            report
         },
         success: function(data) {
             alert("Report sent successfully.");
         },
         error: function(data){
-            //alert("Submit fail. Please try again later.");
+
         }
     });
 });
@@ -37,4 +43,8 @@ $(document).on('click', '.alternativeRoute' , function() {
     let busNumber = $(this).find('.busNumber').text();
 
     //make a call to update the user on the bus
+
+
 });
+
+//user on bus is done on the php to show all bus number

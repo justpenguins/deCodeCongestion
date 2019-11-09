@@ -4,10 +4,8 @@
     }
 
     /*<?php echo $_GET['alert']; ?>*/
-
     //exit();
 ?>
-
 
 <!DOCTYPE html>
 <html>
