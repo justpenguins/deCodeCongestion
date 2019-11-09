@@ -12,6 +12,9 @@
     <head>
         <title>deCodeCongestion Main</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="UserRequest.js">
+
+        </script>
         <link rel="stylesheet" href="style.css">
         <?php require 'db_connection.php' ?>
     </head>
@@ -21,16 +24,17 @@
 
         <h1 id = "mainHeader">Transfer</h1>
 
-        <form action="#">
+        <form action="#" method="post">
             Starting point:<br>
                 <input type="text" name="Start" value=""><br>
             Destination:<br>
                 <input type="text" name="lastname" value=""><br><br>
-            <input type="submit" value="Find My Route!">
+            <input  class="submit_button" type="submit" value="Find My Route!">
         </form>
         <!--must find a place for the information inputted to go to (ie a .php file)-->
         <div class="results">
             <h3>Recommended Routes:</h3>
+            <form class="response"></form>
         </div>
 
 
