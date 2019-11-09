@@ -4,7 +4,12 @@ let startPoint = $('#startPoint').val();
 let busNumber = $('#start').val();
 
 $('.submit_button').click(function(event) {
-    console.log("Hello World");
+    console.log({
+        "uid": uid,
+        "End Point": endPoint,
+        "Start Point": startPoint,
+        "Bus Number": busNumber
+    });
 });
 
 $('.report_button').click(function(event) {
@@ -20,6 +25,8 @@ $('.report_button').click(function(event) {
         'busNumberOne': busNumberOne,
         'busNumberTwo': busNumberTwo
     }
+
+    console.log(report);
 
     //sends report info to database accident table
     $.ajax({
@@ -43,8 +50,11 @@ $(document).on('click', '.alternativeRoute' , function() {
     let busNumber = $(this).find('.busNumber').text();
 
     //make a call to update the user on the bus
-
-
+    console.log({
+        "End Point": endPoint,
+        "Start Point": startPoint,
+        "Bus Number": busNumber
+    });
 });
 
 //user on bus is done on the php to show all bus number
@@ -56,7 +66,7 @@ function userOnBus(){
         url: 'userOnBus.php',
         method: 'GET',
         success: function(data) {
-            
+
         },
         error: function(data){
 
