@@ -1,3 +1,14 @@
+<?php
+    if ($_GET['alert']){
+        echo "Unexpected congestion on this route.<br>";
+    }
+
+    /*<?php echo $_GET['alert']; ?>*/
+
+    //exit();
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
