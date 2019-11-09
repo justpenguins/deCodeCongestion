@@ -13,6 +13,7 @@
         <title>deCodeCongestion Main</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" href="style.css">
+        <?php require 'db_connection.php' ?>
     </head>
     <body>
         <?php include 'header.php' ?>
@@ -22,7 +23,7 @@
 
         <form action="#">
             Starting point:<br>
-                <input type="text" name="firstname" value=""><br>
+                <input type="text" name="Start" value=""><br>
             Destination:<br>
                 <input type="text" name="lastname" value=""><br><br>
             <input type="submit" value="Find My Route!">
@@ -32,9 +33,7 @@
             <h3>Recommended Routes:</h3>
         </div>
 
-        <div class="footer">
-            <h1 class="goteamgo">GO TEAM GO</h1>
-        </div>
+
         <?php include 'footer.php'?>
 
     </body>
