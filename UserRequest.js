@@ -2,6 +2,7 @@ let uid = "unit1";
 
 //registers user
 $('.submit_button').click(function(event) {
+    console.log("hello world");
     let startPoint = $('#startPoint').val();
     let endPoint = $('#endPoint').val();
     let busNumber = $('#start').val();
@@ -18,7 +19,7 @@ $('.submit_button').click(function(event) {
     //record user to table
     //sends report info to database accident table
     $.ajax({
-        url: 'register.php',
+        url: 'http://localhost/phpmyadmin/db_structure.php?db=decodecongestion',
         method: 'POST',
         data: {
             user

@@ -6,29 +6,29 @@
     /*<?php echo $_GET['alert']; ?>*/
     //exit();
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
         <title>deCodeCongestion Main</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="UserRequest.js"></script>
+        <script src="UserRequest.js" defer></script>
         <link rel="stylesheet" href="style.css">
         <?php require 'db_connection.php' ?>
     </head>
     <body>
-        <?php include 'header.php' ?>
+        <?php include 'header.php'?>
         <img src="">
 
         <h1 id = "mainHeader">Transfer</h1>
 
-        <form action="#" method="post">
+        <form >
             Starting point:<br>
-                <input type="text" name="Start" id="startPoint" value=""><br>
+                <input type="text" name="Start" id="startPoint"><br>
             Destination:<br>
-                <input type="text" name="End" id="endPoint" value=""><br><br>
-            <input  class="submit_button" type="submit" value="Find My Route!">
+                <input type="text" name="End" id="endPoint"><br><br>
+
         </form>
+        <button class="submit_button">Find My Route</button>
         <!--must find a place for the information inputted to go to (ie a .php file)-->
         <div class="results">
             <h3>Recommended Routes:</h3>
