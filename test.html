@@ -2,33 +2,46 @@
 <html>
     <head>
         <title>deCodeCongestion Main</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="UserRequest.js" defer></script>
-        <link rel="stylesheet" href="style.css">
-        <?php require 'db_connection.php' ?>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <?php include 'header.php'?>
-        <img src="">
+        
+        <div class="topnav">
+            <a class="active" href="test.html">Home</a>
+            <a href="report.html">Report a Problem</a>
+            <a href="admin.html">Admin</a>
+        </div>
+        <div class="main" style="padding-left: 60px; padding-bottom: 35px;">
+            <h1 id = "mainHeader">Transfer</h1>
 
-        <h1 id = "mainHeader">Transfer</h1>
-
-        <form >
-            Starting point:<br>
-                <input type="text" name="Start" id="startPoint"><br>
-            Destination:<br>
-                <input type="text" name="End" id="endPoint"><br><br>
-
-        </form>
-        <button class="submit_button">Find My Route</button>
-        <!--must find a place for the information inputted to go to (ie a .php file)-->
-        <div class="results">
-            <h3>Recommended Routes:</h3>
-            <form class="response"></form>
+            <form class="rerouteRequest">
+                Starting point:<br><br>
+                    <input style="height: 30px; width: 300px; font-size: 20px;" type="text" name="Start" id="startPoint"><br><br>
+                Destination:<br><br>
+                    <input style="height: 30px; width: 300px; font-size:20px;" name="End" id="endPoint"><br><br>
+            </form>
+            <button style="width:300px; height: 30px; font-size: 20px;" class="submit_button">Find My Route</button>
+        
+        </div>
+       
+        <h3 style="padding-left:60px;">Recommended Routes:</h3>
+        
+        <div class="results" style="padding-left: 60px; padding-bottom: 10px; padding-top: 10px; background-color: lightgray;">
+                
+            <div class="response">
+                <p id="route1"></p>
+                <p id="route2"></p>
+                <p id="route3"></p>
+            </div>
+            
+        </div>
+        
+        <div class="footer" style="text-align: center;">
+            <img src="https://raw.githubusercontent.com/gchang37/deCodeCongestion/master/Reroute%20Logo.jpg" width="400px;" >
         </div>
 
-
-        <?php include 'footer.php'?>
+        
 
     </body>
 </html>

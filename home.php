@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <?php include 'header.php'?>
+        
         <img src="">
 
         <h1 id = "mainHeader">Transfer</h1>
