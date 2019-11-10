@@ -12,12 +12,18 @@
         <title>deCodeCongestion Main</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="UserRequest.js" defer></script>
-        <script src="report.js" defer></script>
+        <script src="add_incident.js" defer></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <?php include 'header.php'?>;
         <img src="">
+
+        <select id="user">
+            <option value="1">user1</option>
+            <option value="2">user2</option>
+            <option value="3">user3</option>
+        </select>
 
         <h1 id = "mainHeader">Transfer</h1>
 

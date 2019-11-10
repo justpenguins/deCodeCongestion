@@ -1,17 +1,24 @@
-let uid = "123";
+let uid = $('#user option:selected').val();
 var startPoint = "";
 var endPoint = "";
 
+$('#user').change(function(){
+    console.log($('#user option:selected').val());
+});
+
+
 //registers user
 $('.submit_button').click(function(event) {
-    console.log("hello world");
+    $('.response').empty();
     startPoint = $('#startPoint').val();
     endPoint = $('#endPoint').val();
+    uid = $('#user option:selected').val();
 
     $.ajax({
         url: 'findRoute.php',
         method: 'GET',
         data: {
+            uid: uid,
             startPoint: startPoint,
             endPoint: endPoint
         },
@@ -85,7 +92,8 @@ $(document).on('click', '.alternativeRoute' , function() {
         method: 'POST',
         data: user,
         success: function(data) {
-            // console.log("Worked");
+            //TODO: continue to check for stopNo here and alert any lower stopNo users
+            //by checking their starting
         },
         error: function(data){
 

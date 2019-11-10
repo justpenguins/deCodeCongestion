@@ -2,13 +2,11 @@
 include('db_connection.php');
 include('sqlHelper.php');
 
-$uid = $_POST['uid'];
-$routeNumber = $_POST['routeNumber'];
-$busNumberOne = $_POST['busNumberOne'];
-$busNumberTwo = $_POST['$busNumberTwo'];
+$stopNo = $_POST['stopNo'];
+$busRoute = $_POST['busRoute'];
+//$incident = $_POST['incident'];
 
-
-$result = $conn->query("call add_incident(\"$uid\", \"$routeNumber\",\"$busNumberOne\",\"$busNumberTwo\")");
+$result = $conn->query("call add_incident(\"$busRoute\", \"$stopNo\")");
 clearConnection($conn);
 
 // $mysqli->close();
