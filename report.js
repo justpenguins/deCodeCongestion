@@ -15,12 +15,7 @@ $('.report_button').click(function(event) {
     $.ajax({
         url: 'report.php',
         method: 'POST',
-        data: {
-            'uid': uid,
-            'routeNumber': routeNumber,
-            'busNumberOne': busNumberOne,
-            'busNumberTwo': busNumberTwo
-        },
+        data: report,
         success: function(data) {
             alert("Report sent successfully.");
         },

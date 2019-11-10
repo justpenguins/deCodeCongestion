@@ -21,12 +21,7 @@ $('.submit_button').click(function(event) {
     $.ajax({
         url: 'register.php',
         method: 'POST',
-        data: {
-            "uid": uid,
-            "startPt": startPoint,
-            "endPt": endPoint,
-            "busNo": busNo
-        },
+        data: user,
         success: function(data) {
 
         },
