@@ -1,32 +1,36 @@
+<?php
+    // if ($_GET['alert']){
+    //     echo "Unexpected congestion on this route.<br>";
+    // }
+
+    /*<?php echo $_GET['alert']; ?>*/
+    //exit();
+?>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>Main</title>
-        <link rel="stylesheet" href="test.css">
+        <title>deCodeCongestion Main</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="UserRequest.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+        <?php require 'db_connection.php' ?>
     </head>
-
     <body>
+        <?php include 'header.php'?>
 
-        <?php include 'header.php'?>;
 
-        <img src="">
+        <h1 id = "mainHeader">Report an incident</h1>
 
-        <h1 id = "mainHeader">Real time transit app </h1>
 
-        <h2 class = "subHeader">Overview of problem:</h2>
-            <p>Small desc. of how the app work, a bit of marketing.</p>
+        <button class="submit_button">Report</button>
+        <!--must find a place for the information inputted to go to (ie a .php file)-->
+        <div class="results">
+            <h3>Recommended Routes:</h3>
+            <form class="response"></form>
+        </div>
 
-        <h2 class = "subHeader">Our proposal:</h2>
-            <p>Our idea is to create a app that can give a commuter real time updates on</p>
 
-        <h2 class = "subHeader">How it works:</h2>
-            <p>It's google maps basically...if you can use that then you good here</p>
-
-        <button class="report_button">Find My Route</button>
-
-        <?php include 'footer.php'; ?>
+        <?php include 'footer.php'?>
 
     </body>
-
 </html>
