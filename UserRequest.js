@@ -15,7 +15,8 @@ $('.submit_button').click(function(event) {
     }
 
     //console.log(user);
-
+    localStorage.setItem("busNo", busNo);
+    console.log("BusNo:" + busNo);
     //record user to table
     //sends report info to database accident table
     $.ajax({

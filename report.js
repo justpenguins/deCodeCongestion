@@ -1,10 +1,12 @@
+//let uid = "123";
+
 $('.report_button').click(function(event) {
     let routeNumber = $('#routeNumber').val();
     let busNumberOne = $('#busNumberOne').val();
     let busNumberTwo = $('#busNumberTwo').val();
 
     let report = {
-        'uid': uid,
+        'busNo': localStorage.getItem("busNo"),
         'routeNumber': routeNumber,
         'busNumberOne': busNumberOne,
         'busNumberTwo': busNumberTwo
@@ -13,7 +15,7 @@ $('.report_button').click(function(event) {
 
     //sends report info to database accident table
     $.ajax({
-        url: 'report.php',
+        url: 'add_incident.php',
         method: 'POST',
         data: report,
         success: function(data) {
