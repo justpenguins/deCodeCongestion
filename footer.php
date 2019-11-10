@@ -1,4 +1,5 @@
 <div class="footer">
-    <h1 class="goteamgo">GO TEAM GO</h1>
+    <img src="https://raw.githubusercontent.com/gchang37/deCodeCongestion/master/Reroute%20Logo.jpg" width="400px;" >
+    <p> &copy; ReRout 2019 </p>
+
 </div>
-<p> &copy; ReRout 2019 </p>

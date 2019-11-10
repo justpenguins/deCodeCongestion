@@ -29,6 +29,8 @@ $('.report_button').click(function(event) {
         data: report,
         success: function(data) {
             alert("Report sent successfully.");
+            $('.submit_button').addClass("hidden");
+            $('.recalculate_button').removeClass("hidden");
         },
         error: function(data){
 

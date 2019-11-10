@@ -72,6 +72,48 @@ $('.submit_button').click(function(event) {
     // });
 });
 
+$('.recalculate_button').click(function(event) {
+    $('.response').empty();
+    startPoint = $('#startPoint').val();
+    endPoint = $('#endPoint').val();
+    uid = $('#user option:selected').val();
+
+    $.ajax({
+        url: 'recalculateRoute.php',
+        method: 'GET',
+        data: {
+            uid: uid,
+            startPoint: startPoint,
+            endPoint: endPoint
+        },
+        success: function(data) {
+            console.log(data);
+
+            //ALL Routes
+            let dataArray = data.split("-");
+            dataArray.pop();
+
+            console.log(dataArray);
+
+            //THEN
+            for (let route of dataArray){
+                let busRoute = route.split(":")[0];
+                let busNo = route.split(":")[1];
+
+                let style = "<div class='alternativeRoute'>"
+                    + "<div><h3>Bus Route: </h3><span class='busRoute'>" + busRoute + "</span></div>"
+                    + "<div><h3>Bus Number: </h3><span class='busNo'>" + busNo + "</span></div>";
+                    + "</div>"
+                $('.response').append(style);
+            }
+            //
+        },
+        error: function(data){
+
+        }
+    });
+});
+
 $(document).on('click', '.alternativeRoute' , function() {
     let busRoute = $(this).find('.busRoute').text();
     let busNo = $(this).find('.busNo').text();
