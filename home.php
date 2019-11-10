@@ -12,10 +12,11 @@
         <title>deCodeCongestion Main</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="UserRequest.js" defer></script>
+        <script src="report.js" defer></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        
+        <?php include 'header.php'?>;
         <img src="">
 
         <h1 id = "mainHeader">Transfer</h1>
@@ -28,10 +29,14 @@
 
         </form>
         <button class="submit_button">Find My Route</button>
+        <button class="report_button">Report a Problem</button>
         <!--must find a place for the information inputted to go to (ie a .php file)-->
         <div class="results">
             <h3>Recommended Routes:</h3>
             <form class="response"></form>
+
+            <div class="response">
+            </div>
         </div>
 
 

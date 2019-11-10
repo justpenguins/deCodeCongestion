@@ -1,11 +1,12 @@
 let uid = "123";
-let busNo = "0";
+var startPoint = "";
+var endPoint = "";
 
 //registers user
 $('.submit_button').click(function(event) {
     console.log("hello world");
-    let startPoint = $('#startPoint').val();
-    let endPoint = $('#endPoint').val();
+    startPoint = $('#startPoint').val();
+    endPoint = $('#endPoint').val();
 
     $.ajax({
         url: 'findRoute.php',
@@ -19,10 +20,21 @@ $('.submit_button').click(function(event) {
 
             //ALL Routes
             let dataArray = data.split("-");
-            console.log(dataArray);
-            
-            //THEN
+            dataArray.pop();
 
+            console.log(dataArray);
+
+            //THEN
+            for (let route of dataArray){
+                let busRoute = route.split(":")[0];
+                let busNo = route.split(":")[1];
+
+                let style = "<div class='alternativeRoute'>"
+                    + "<div><h3>Bus Route: </h3><span class='busRoute'>" + busRoute + "</span></div>"
+                    + "<div><h3>Bus Number: </h3><span class='busNo'>" + busNo + "</span></div>";
+                    + "</div>"
+                $('.response').append(style);
+            }
             //
         },
         error: function(data){
@@ -30,41 +42,39 @@ $('.submit_button').click(function(event) {
         }
     });
 
+    // let user = {
+    //     "uid": uid,
+    //     "startPt": startPoint,
+    //     "endPt": endPoint,
+    //     "busNo": busNo
+    // }
+
+    //console.log(user);
+    //record user to table
+    //sends report info to database accident table
+    // $.ajax({
+    //     url: 'register.php',
+    //     method: 'POST',
+    //     data: user,
+    //     success: function(data) {
+    //         console.log(data);
+    //     },
+    //     error: function(data){
+    //
+    //     }
+    // });
+});
+
+$(document).on('click', '.alternativeRoute' , function() {
+    let busRoute = $(this).find('.busRoute').text();
+    let busNo = $(this).find('.busNo').text();
+
     let user = {
         "uid": uid,
         "startPt": startPoint,
         "endPt": endPoint,
+        "busRoute": busRoute,
         "busNo": busNo
-    }
-
-    //console.log(user);
-    localStorage.setItem("busNo", busNo);
-    console.log("BusNo:" + busNo);
-    //record user to table
-    //sends report info to database accident table
-    $.ajax({
-        url: 'register.php',
-        method: 'POST',
-        data: user,
-        success: function(data) {
-            console.log(data);
-        },
-        error: function(data){
-
-        }
-    });
-});
-
-$(document).on('click', '.alternativeRoute' , function() {
-    let startPoint = $(this).find('.startPoint').text();
-    let endPoint = $(this).find('.endPoint').text();
-    let busNumber = $(this).find('.busNumber').text();
-
-    let user = {
-        "uid": uid,
-        "End Point": endPoint,
-        "Start Point": startPoint,
-        "Bus Number": busNumber
     }
 
     console.log(user);
@@ -73,11 +83,9 @@ $(document).on('click', '.alternativeRoute' , function() {
     $.ajax({
         url: 'register.php',
         method: 'POST',
-        data: {
-            report
-        },
+        data: user,
         success: function(data) {
-
+            // console.log("Worked");
         },
         error: function(data){
 
