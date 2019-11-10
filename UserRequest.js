@@ -101,8 +101,8 @@ $('.recalculate_button').click(function(event) {
                 let busNo = route.split(":")[1];
 
                 let style = "<div class='alternativeRoute'>"
-                    + "<div><h3>Bus Route: </h3><span class='busRoute'>" + busRoute + "</span></div>"
-                    + "<div><h3>Bus Number: </h3><span class='busNo'>" + busNo + "</span></div>";
+                    + "<div><h3>Bus Route: <span class='busRoute'>" + busRoute + "</span></h3></div>"
+                    + "<div><h3>Bus Number: <span class='busNo'>" + busNo + "</span></h3></div>";
                     + "</div>"
                 $('.response').append(style);
             }

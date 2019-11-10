@@ -40,9 +40,9 @@
             <button class="report_button">Report a Problem</button>
 
             <h3>Recommended Routes:</h3>
-        </div>
-        <div class="results">
-            <div class="response"></div>
+            <div class="results">
+                <div class="response"></div>
+            </div>
         </div>
         <!--must find a place for the information inputted to go to (ie a .php file)-->
         <?php include 'footer.php'?>

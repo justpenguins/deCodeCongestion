@@ -23,7 +23,7 @@ function readIncident(){
                 let style = "<div class='routes'>"
                     // + "<div><h3>Bus Route: </h3><span class='busRoute'>" + busRoute + "</span></div>"
                     // + "<div><h3>Bus Number: </h3><span class='busNo'>" + busNo + "</span></div>";
-                    + "Bus Route: " + routeNo + " has " + numberOfIncidents + " incidents"
+                    + "Bus Route: " + routeNo + " has <span class='incidents'>" + numberOfIncidents + " </span>incidents"
                     + "</div>"
                 $('.incidentsReport').append(style);
             }

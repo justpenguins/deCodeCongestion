@@ -50,27 +50,37 @@ select {
 }
 
 .main {
-    padding-left: 60px;
-    padding-bottom: 35px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 input {
-    height: 30px;
+    height: 40px;
     width: 300px;
     font-size: 20px;
+    border-radius: 12px;
+    border: 0;
+    border: 2px solid darkgray;
+    margin: 0;
+    text-indent: 4px;
 }
 
 button {
-    width:300px;
-    height: 30px;
+    width: 300px;
+    height: 46px;
     font-size: 20px;
+    border-radius: 12px;
+    border: 0;
+    background-color: lightblue;
+    margin: 0;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .results {
-    padding-left: 60px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    background-color: lightgray;
+    padding: 10px 0;
 }
 
 .footer {
@@ -78,9 +88,47 @@ button {
 }
 
 h3 {
-    padding-left: 60px;
+
 }
 
 .hidden {
     display: none;
+}
+
+.alternativeRoute {
+    margin: 5px auto;
+    border: 2px solid darkgray;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.alternativeRoute:hover {
+    background: lightgray;
+    cursor: pointer;
+}
+
+.alternativeRoute > div {
+    display: flex;
+}
+
+.busRoute {
+    align-self: center;
+}
+
+.busNo {
+    align-self: center;
+}
+
+.incidents {
+    color: red;
+}
+
+.routes {
+    background: lightsalmon;
+    border-radius: 11px;
+    text-indent: 12px;
+    font-size: 24px;
+    margin: 14px auto;
+    padding: 22px;
 }
