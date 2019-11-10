@@ -1,13 +1,11 @@
 <?php
-// $mysqli = new mysqli("servername", "username", "password", "dbname");
-// if($mysqli->connect_error) {
-//   exit('Could not connect');
-// }
+$user = 'root';
+$pwd = '';
+$server = 'localhost';
+$dbname = 'deCodeCongestion';
 
-//$sql = "SELECT customerid, companyname, contactname, address, city, postalcode, country
+$conn = new mysqli($server, $user, $pwd, $dbname); //or die('Error connecting to MySQL server.');
 //FROM customers WHERE customerid = ?";
-
-
 
 // echo "<div>";
 // echo "CustomerID";

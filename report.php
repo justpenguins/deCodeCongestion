@@ -1,20 +1,16 @@
 <?php
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "myDB";
+$user = 'root';
+$pwd = '';
+$server = 'localhost';
+$dbname = 'deCodeCongestion';
 
-$mysqli = new mysqli("servername", "username", "password", "dbname");
-if($mysqli->connect_error) {
-  exit('Could not connect');
-}
+$conn = new mysqli($server, $user, $pwd, $dbname); //or die('Error connecting to MySQL server.');
 
 $uid = $_POST['uid'];
 $routeNumber = $_POST['routeNumber'];
 $busNumberOne = $_POST['busNumberOne'];
 $busNumberTwo = $_POST['$busNumberTwo'];
 
-//call->query("update user route");
-
+// $result = $conn->query("update user route");
 $mysqli->close();
 ?>

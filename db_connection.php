@@ -1,5 +1,4 @@
 <?php
-
 $user = 'root';
 $pwd = '';
 $server = 'localhost';

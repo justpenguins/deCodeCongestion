@@ -1,5 +1,4 @@
-//user on bus is done on the php to show all bus number
-setInterval(userOnBus, 1000);
+setInterval(userOnBus, 1000); //check the changes every second
 
 function userOnBus(){
     //go grab the user table
