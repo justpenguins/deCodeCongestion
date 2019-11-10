@@ -7,6 +7,29 @@ $('.submit_button').click(function(event) {
     let startPoint = $('#startPoint').val();
     let endPoint = $('#endPoint').val();
 
+    $.ajax({
+        url: 'findRoute.php',
+        method: 'GET',
+        data: {
+            startPoint: startPoint,
+            endPoint: endPoint
+        },
+        success: function(data) {
+            console.log(data);
+
+            //ALL Routes
+            let dataArray = data.split("-");
+            console.log(dataArray);
+            
+            //THEN
+
+            //
+        },
+        error: function(data){
+
+        }
+    });
+
     let user = {
         "uid": uid,
         "startPt": startPoint,

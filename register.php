@@ -1,5 +1,6 @@
 <?php
 include('db_connection.php');
+include('sqlHelper.php');
 
 $uid = $_POST['uid'];
 $startPt = $_POST['startPt'];
