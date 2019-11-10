@@ -8,11 +8,7 @@
 
     <body>
 
-        <div class="topnav">
-            <a class="active" href="test.html">Home</a>
-            <a href="Report.html">Report a problem</a>
-            <a href="admin.html">Admin</a>
-        </div>
+        <?php include 'header.php'?>;
 
         <img src="">
 
@@ -28,6 +24,8 @@
             <p>It's google maps basically...if you can use that then you good here</p>
 
         <button class="report_button">Find My Route</button>
+
+        <?php include 'footer.php'; ?>
 
     </body>
 
