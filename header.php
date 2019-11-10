@@ -1,5 +1,5 @@
 <div class="topnav">
-    <a class="active" href="test.html">Home</a>
-    <a href="Report.html">Report a Problem</a>
-    <a href="admin.html">Admin</a>
+    <a class="active" href="home.php">Home</a>
+    <a href="report.php">Report a Problem</a>
+    <a href="admin.php">Admin</a>
 </div>
