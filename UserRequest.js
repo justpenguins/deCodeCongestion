@@ -4,13 +4,11 @@ let uid = "unit1";
 $('.submit_button').click(function(event) {
     let startPoint = $('#startPoint').val();
     let endPoint = $('#endPoint').val();
-    let busNumber = $('#start').val();
 
     let user = {
         "uid": uid,
         "End Point": endPoint,
-        "Start Point": startPoint,
-        "Bus Number": busNumber
+        "Start Point": startPoint
     }
 
     console.log(user);
@@ -21,7 +19,7 @@ $('.submit_button').click(function(event) {
         url: 'register.php',
         method: 'POST',
         data: {
-            user
+            "user": user
         },
         success: function(data) {
 
