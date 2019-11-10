@@ -5,13 +5,11 @@ $('.submit_button').click(function(event) {
     console.log("hello world");
     let startPoint = $('#startPoint').val();
     let endPoint = $('#endPoint').val();
-    let busNumber = $('#start').val();
 
     let user = {
         "uid": uid,
         "End Point": endPoint,
-        "Start Point": startPoint,
-        "Bus Number": busNumber
+        "Start Point": startPoint
     }
 
     console.log(user);
@@ -22,7 +20,7 @@ $('.submit_button').click(function(event) {
         url: 'http://localhost/phpmyadmin/db_structure.php?db=decodecongestion',
         method: 'POST',
         data: {
-            user
+            "user": user
         },
         success: function(data) {
 
