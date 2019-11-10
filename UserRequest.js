@@ -1,4 +1,5 @@
-let uid = "unit1";
+let uid = "123";
+let busNo = "0";
 
 //registers user
 $('.submit_button').click(function(event) {
@@ -8,19 +9,23 @@ $('.submit_button').click(function(event) {
 
     let user = {
         "uid": uid,
-        "End Point": endPoint,
-        "Start Point": startPoint
+        "startPt": startPoint,
+        "endPt": endPoint,
+        "busNo": busNo
     }
 
-    console.log(user);
+    //console.log(user);
 
     //record user to table
     //sends report info to database accident table
     $.ajax({
-        url: 'http://localhost/phpmyadmin/db_structure.php?db=decodecongestion',
+        url: 'register.php',
         method: 'POST',
         data: {
-            "user": user
+            "uid": uid,
+            "startPt": startPoint,
+            "endPt": endPoint,
+            "busNo": busNo
         },
         success: function(data) {
 

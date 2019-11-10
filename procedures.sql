@@ -1,5 +1,7 @@
-DELIMITER //
-CREATE PROCEDURE update_user_route(INT, INT, INT, INT)
+DELIMITER
+CREATE PROCEDURE register_user()
 BEGIN
-    INSERT INTO affected_bus (BusNo, RouteNo, PassedBusStopNo, ApproachingBusStopNo) Values(INT,INT, INT, INT );
-END
+    SELECT *
+    FROM user;
+END //
+DELIMITER;
