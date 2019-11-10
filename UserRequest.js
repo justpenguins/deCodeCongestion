@@ -24,7 +24,7 @@ $('.submit_button').click(function(event) {
         method: 'POST',
         data: user,
         success: function(data) {
-
+            console.log(data);
         },
         error: function(data){
 

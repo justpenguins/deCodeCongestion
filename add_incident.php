@@ -10,7 +10,5 @@ $busNumberTwo = $_POST['$busNumberTwo'];
 $result = $conn->query("call add_incident(\"$uid\", \"$routeNumber\",\"$busNumberOne\",\"$busNumberTwo\")");
 clearConnection($conn);
 
-echo $result;
-
 // $mysqli->close();
 ?>
