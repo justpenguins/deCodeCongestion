@@ -33,8 +33,6 @@
         <!--must find a place for the information inputted to go to (ie a .php file)-->
         <div class="results">
             <h3>Recommended Routes:</h3>
-            <form class="response"></form>
-
             <div class="response">
             </div>
         </div>
