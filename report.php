@@ -13,7 +13,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="report.js" defer></script>
         <link rel="stylesheet" href="style.css">
-        <?php require 'db_connection.php' ?>
     </head>
     <body>
         <?php include 'header.php'?>
